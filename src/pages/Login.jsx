@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
+import logo from "../assets/pasta1/logo.png";
+import Menina from "../assets/pasta1/meninainicio.svg";
 export default function Login() {
   return (
-    <div className=" min-h-screen w-auto flex flex-col bg-[#3B1E54] font-sans text-foreground box-border text-[]#eeee">
-      <div className="flex justify-center items-center text-3xl  font-extrabold uppercase h-20 text-[#EEEEEE]">
-        Caderno De Estudos
+    <div className="relative overflow-hidden min-h-screen w-auto flex flex-col bg-[#3B1E54] font-sans text-foreground box-border text-[#eeeeee]">
+      <div className="flex justify-center items-center text-3xl  font-extrabold uppercase  text-[#EEEEEE]">
+        {/* Caderno De Estudos */}
+        <div>
+          <img src={logo} alt="Logo" className="w-full h-50" />
+        </div>
       </div>
       <div className=" flex flex-1 items-center justify-center pb-30  ">
-        <form className="w-full max-w-sm  min-h-90 gap-5 bg-[#9B7EBD]/40 flex flex-col border-2 border-[#9B7EBD] justify-center items-center p-5 rounded-xl">
+        <form className="relative w-full max-w-sm min-h-90 gap-5 bg-[#9B7EBD]/40 flex flex-col border-2 border-[#9B7EBD] justify-center items-center p-5 rounded-xl">
           <h1 className="text-center text-2xl font-bold text-[#220d34] ">
             LOGIN
           </h1>
@@ -33,8 +38,14 @@ export default function Login() {
           </button>
           <Link to="/Cadastro" className="text-[#eeee] font-bold">
             Criar{" "}
-            <span className="text-[#220d34]  hover:text-[#9B7EBD]">Conta</span>
+            <span className="text-[#220d34] hover:text-[#9B7EBD]">Conta</span>
           </Link>
+
+          <img
+            src={Menina}
+            alt="menina"
+            className="absolute left-full top-0 -ml-0.5 -scale-x-100 h-full w-auto max-w-none pointer-events-none hidden lg:block"
+          />
         </form>
       </div>
     </div>
