@@ -33,9 +33,12 @@ export default function Login() {
               className="p-2 px-5 rounded-4xl bg-[#EEEEEE]"
             />
           </div>
-          <button className="bg-[#220d34] hover:bg-[#B983FF] p-2 w-30 rounded-4xl font-bold text-[#eeee]">
-            Entrar
-          </button>
+          {/* TODO: trocar por useNavigate após validar o login */}
+          <Link to="/">
+            <button className="bg-[#220d34] hover:bg-[#B983FF] p-2 w-30 rounded-4xl font-bold text-[#eeee]">
+              Entrar
+            </button>
+          </Link>
 
           <div className="flex flex-col gap-1 items-center">
             <Link
