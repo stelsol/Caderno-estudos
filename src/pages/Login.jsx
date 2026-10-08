@@ -34,7 +34,7 @@ export default function Login() {
             />
           </div>
           {/* TODO: trocar por useNavigate após validar o login */}
-          <Link to="/">
+          <Link to="/Home">
             <button className="bg-[#220d34] hover:bg-[#B983FF] p-2 w-30 rounded-4xl font-bold text-[#eeee]">
               Entrar
             </button>
