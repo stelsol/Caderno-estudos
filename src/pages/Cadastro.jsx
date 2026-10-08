@@ -16,6 +16,29 @@ export default function Cadastro() {
             CADASTRO
           </h1>
           <div className="w-full flex flex-col gap-3 text-[#eeee]">
+            <div className="flex gap-3 pr-4">
+              <div className="flex flex-col gap-2 w-2/4 ">
+                <label htmlFor="Confemail">Nome</label>
+                <input
+                  type="texto"
+                  name="Nome"
+                  id="Nome"
+                  placeholder="Informe seu nome"
+                  className="p-2 px-5 rounded-4xl text-black bg-[#EEEEEE]"
+                />
+              </div>
+
+              <div className="flex flex-col gap-2 w-2/4 ">
+                <label htmlFor="Confemail">Sobrenome</label>
+                <input
+                  type="texto"
+                  name="Nome"
+                  id="Sobrenome"
+                  placeholder="Informe seu sobrenome"
+                  className="p-2 px-5 rounded-4xl text-black bg-[#EEEEEE]"
+                />
+              </div>
+            </div>
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -24,14 +47,7 @@ export default function Cadastro() {
               placeholder="Endereco@email.com"
               className="p-2 px-5 rounded-4xl bg-[#EEEEEE]"
             />
-            <label htmlFor="Confemail">Confirmar Email</label>
-            <input
-              type="email"
-              name="email"
-              id="Confemail"
-              placeholder="Endereco@email.com"
-              className="p-2 px-5 rounded-4xl text-black bg-[#EEEEEE]"
-            />
+
             <label htmlFor="password">Senha</label>
             <input
               type="password"
