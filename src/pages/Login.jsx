@@ -33,18 +33,30 @@ export default function Login() {
               className="p-2 px-5 rounded-4xl bg-[#EEEEEE]"
             />
           </div>
-          <button className="bg-[#220d34] hover:bg-[#B983FF] p-2 w-30 rounded-4xl font-bold text-[#eeee]">
-            Entrar
-          </button>
-          <Link to="/Cadastro" className="text-[#eeee] font-bold">
-            Criar{" "}
-            <span className="text-[#220d34] hover:text-[#9B7EBD]">Conta</span>
+          {/* TODO: trocar por useNavigate após validar o login */}
+          <Link to="/">
+            <button className="bg-[#220d34] hover:bg-[#B983FF] p-2 w-30 rounded-4xl font-bold text-[#eeee]">
+              Entrar
+            </button>
           </Link>
+
+          <div className="flex flex-col gap-1 items-center">
+            <Link
+              to="/Cadastro"
+              className="text-[#eeee]  hover:text-[#220d34] font-bold"
+            >
+              Esqueci minha senha
+            </Link>
+            <Link to="/Cadastro" className="text-[#eeee] font-bold">
+              Criar{" "}
+              <span className="text-[#220d34] hover:text-[#9B7EBD]">Conta</span>
+            </Link>
+          </div>
 
           <img
             src={Menina}
             alt="menina"
-            className="absolute left-full top-0 -ml-0.5 -scale-x-100 h-full w-auto max-w-none pointer-events-none hidden lg:block"
+            className="absolute left-full -top-17 -ml-0.5 -scale-x-100 h-[500px] w-auto max-w-none pointer-events-none hidden lg:block"
           />
         </form>
       </div>
