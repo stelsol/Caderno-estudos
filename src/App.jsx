@@ -9,7 +9,7 @@ export default function App() {
     <div className="min-h-screen flex flex-col font-sans bg-backgroud text-foreground bg-amber-950">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navigate to="/Home" replace />} />
+          <Route path="/" element={<Navigate to="/Login" replace />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Cadastro" element={<Cadastro />} />
