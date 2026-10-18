@@ -41,7 +41,7 @@ export default function Home() {
           </div>
         </div>
         <div className="  flex-1 rounded-2xl flex justify-center ">
-          <section className=" flex  flex-col items-center  pt-13">
+          <section className=" flex  flex-col items-center gap-9  pt-13">
             {/* Section frequencia de uso */}
             <section className=" flex gap-6 flex-col ">
               <div className="flex w-4xl  justify-between items-center">
@@ -103,6 +103,21 @@ export default function Home() {
                 <p className="text-[#9B7EBD]/70 ">
                   0 de 7 dias estudados na semana
                 </p>
+              </div>
+            </section>
+
+            {/* Section Metas da semana */}
+            <section className="flex  items-center">
+              <div className="flex w-4xl   justify-between items-center  ">
+                <div>
+                  <p>Metas da semana</p>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  {" "}
+                  <FiPlus />
+                  <p>Ver trilha</p>
+                </div>
               </div>
             </section>
           </section>
