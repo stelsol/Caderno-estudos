@@ -9,9 +9,9 @@ const weekdays = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"];
 
 export default function Home() {
   return (
-    <section className=" flex  flex-col items-center gap-9  pt-13">
+    <section className=" flex  flex-col  gap-9  pt-13">
       {/* Section frequencia de uso */}
-      <section className=" flex gap-6 flex-col ">
+      <section className=" flex gap-5 flex-col ">
         <div className="flex w-4xl  justify-between items-center">
           {" "}
           <div className="flex flex-col gap-1">
@@ -32,12 +32,11 @@ export default function Home() {
           {/* contendo os dias estudados */}
           <div className="flex justify-around">
             {/* Dias da semana */}
-            {weekdays.map((weekdays) => (
-              <div key={weekdays} className=" flex flex-col items-center">
+            {weekdays.map((day) => (
+              <div key={day} className=" flex flex-col items-center">
                 {" "}
-                {/* ← key aqui */}
                 <LiaCircleSolid className="text-5xl" />
-                <span>{weekdays}</span> {/* ← aqui NÃO */}
+                <span>{day}</span>
               </div>
             ))}
           </div>
@@ -46,7 +45,7 @@ export default function Home() {
       </section>
 
       {/* Section Metas da semana */}
-      <section className="flex  flex-col items-center gap-5">
+      <section className="flex  flex-col  gap-5">
         <div className="flex w-4xl   justify-between items-center  ">
           <div>
             <p>Metas da semana</p>
@@ -72,7 +71,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex  flex-col items-center gap-5">
+      <section className="flex  flex-col  gap-5">
         <div className="flex w-4xl   justify-between items-center  ">
           <div>
             <p>Cadernos recentes</p>
