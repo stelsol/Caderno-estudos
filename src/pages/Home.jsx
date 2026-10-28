@@ -5,6 +5,8 @@ import { LiaCircleSolid } from "react-icons/lia";
 import { IoCheckmark } from "react-icons/io5";
 import { FaRegFileAlt } from "react-icons/fa";
 
+const weekdays = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"];
+
 export default function Home() {
   return (
     <section className=" flex  flex-col items-center gap-9  pt-13">
@@ -30,41 +32,14 @@ export default function Home() {
           {/* contendo os dias estudados */}
           <div className="flex justify-around">
             {/* Dias da semana */}
-            <div className=" flex flex-col items-center">
-              {" "}
-              <LiaCircleSolid className="text-5xl" />
-              <span>Seg</span>
-            </div>{" "}
-            <div className=" flex flex-col items-center">
-              {" "}
-              <LiaCircleSolid className="text-5xl" />
-              <span>Ter</span>
-            </div>{" "}
-            <div className=" flex flex-col items-center">
-              {" "}
-              <LiaCircleSolid className="text-5xl" />
-              <span>Qua</span>
-            </div>{" "}
-            <div className=" flex flex-col items-center">
-              {" "}
-              <LiaCircleSolid className="text-5xl" />
-              <span>Qui</span>
-            </div>{" "}
-            <div className=" flex flex-col items-center">
-              {" "}
-              <LiaCircleSolid className="text-5xl" />
-              <span>Sex</span>
-            </div>{" "}
-            <div className=" flex flex-col items-center">
-              {" "}
-              <LiaCircleSolid className="text-5xl" />
-              <span>Sab</span>
-            </div>{" "}
-            <div className=" flex flex-col items-center">
-              {" "}
-              <LiaCircleSolid className="text-5xl" />
-              <span>Dom</span>
-            </div>{" "}
+            {weekdays.map((weekdays) => (
+              <div key={weekdays} className=" flex flex-col items-center">
+                {" "}
+                {/* ← key aqui */}
+                <LiaCircleSolid className="text-5xl" />
+                <span>{weekdays}</span> {/* ← aqui NÃO */}
+              </div>
+            ))}
           </div>
           <p className="text-[#9B7EBD]/70 ">0 de 7 dias estudados na semana</p>
         </div>
