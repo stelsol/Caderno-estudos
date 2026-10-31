@@ -4,6 +4,7 @@ import { FiPlus } from "react-icons/fi";
 import { LiaCircleSolid } from "react-icons/lia";
 import { IoCheckmark } from "react-icons/io5";
 import { FaRegFileAlt } from "react-icons/fa";
+import PageSection from "../componentes/PageSection/PageSection";
 
 const weekdays = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"];
 
@@ -11,9 +12,9 @@ export default function Home() {
   return (
     <section className=" flex  flex-col  gap-9  pt-13">
       {/* Section frequencia de uso */}
-      <section className=" flex gap-5 flex-col ">
+
+      <PageSection>
         <div className="flex w-4xl  justify-between items-center">
-          {" "}
           <div className="flex flex-col gap-1">
             <h1 className="text-4xl">Ola, Usuario </h1>
             <p>Seja bem vindo de volta, vamos estudar ?</p>
@@ -42,21 +43,14 @@ export default function Home() {
           </div>
           <p className="text-[#9B7EBD]/70 ">0 de 7 dias estudados na semana</p>
         </div>
-      </section>
+      </PageSection>
 
       {/* Section Metas da semana */}
-      <section className="flex  flex-col  gap-5">
-        <div className="flex w-4xl   justify-between items-center  ">
-          <div>
-            <p>Metas da semana</p>
-          </div>
-
-          <div className="flex items-center gap-2 border-2 border-transparent hover:border-[#9B7EBD]/70 rounded-2xl px-5 py-2 cursor-pointer">
-            {" "}
-            <LiaMapSolid />
-            <p>Ver trilha</p>
-          </div>
-        </div>
+      <PageSection
+        title="Metas da semana"
+        icon={<LiaMapSolid />}
+        LinkText="Ver trilha"
+      >
         <div className="w-full bg-[#9B7EBD]/10  border-2 border-[#9B7EBD]/50 text-center  flex gap-5 rounded-2xl  p-5 items-center ">
           <div>
             <label className="relative inline-flex ">
@@ -70,19 +64,14 @@ export default function Home() {
             <p className="text-[#9B7EBD]/50 ">Informações caso necessário</p>
           </div>
         </div>
-      </section>
-      <section className="flex  flex-col  gap-5">
-        <div className="flex w-4xl   justify-between items-center  ">
-          <div>
-            <p>Cadernos recentes</p>
-          </div>
+      </PageSection>
 
-          <div className="flex items-center gap-2 border-2 border-transparent hover:border-[#9B7EBD]/70 rounded-2xl px-5 py-2 cursor-pointer">
-            {" "}
-            <BsJournal />
-            <p>Ver mais</p>
-          </div>
-        </div>
+      {/* Section Cadernos Recentes */}
+      <PageSection
+        title="Cadernos recentes"
+        icon={<BsJournal />}
+        LinkText="Ver mais"
+      >
         <div className="w-full text-center  flex gap-5 rounded-2xl  items-start ">
           <div className="flex flex-col gap-2 items-start border-2 border-[#9B7EBD]/50 bg-[#9B7EBD]/10 rounded-2xl p-4 ">
             <span className=" flex gap-2 items-center text-[#9B7EBD]/90">
@@ -139,7 +128,19 @@ export default function Home() {
             <p>xx /xx / xxxx</p>
           </div>
         </div>
-      </section>
+      </PageSection>
+
+      {/* <div className="flex w-4xl   justify-between items-center  ">
+          <div>
+            <p>Cadernos recentes</p>
+          </div>
+
+          <div className="flex items-center gap-2 border-2 border-transparent hover:border-[#9B7EBD]/70 rounded-2xl px-5 py-2 cursor-pointer">
+            {" "}
+            <BsJournal />
+            <p>Ver mais</p>
+          </div>
+        </div> */}
     </section>
   );
 }
