@@ -5,8 +5,34 @@ import { LiaCircleSolid } from "react-icons/lia";
 import { IoCheckmark } from "react-icons/io5";
 import { FaRegFileAlt } from "react-icons/fa";
 import PageSection from "../componentes/PageSection/PageSection";
+import Tags from "../componentes/Tags/Tags";
+import CardCaderno from "../componentes/CardCaderno/CardCaderno";
 
 const weekdays = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"];
+
+const cadernos = [
+  {
+    id: 1,
+    assunto: "assunto",
+    title: "Titulo1",
+    tag: ["React", "Tailwind"],
+    data: "XX/XX/XXXX",
+  },
+  {
+    id: 2,
+    assunto: "assunto",
+    title: "Titulo2",
+    tag: ["Hacker", "Https", "Seguranca"],
+    data: "XX/XX/XXXX",
+  },
+  {
+    id: 3,
+    assunto: "assunto",
+    title: "Titulo3",
+    tag: ["teste"],
+    data: "XX/XX/XXXX",
+  },
+];
 
 export default function Home() {
   return (
@@ -72,75 +98,18 @@ export default function Home() {
         icon={<BsJournal />}
         LinkText="Ver mais"
       >
-        <div className="w-full text-center  flex gap-5 rounded-2xl  items-start ">
-          <div className="flex flex-col gap-2 items-start border-2 border-[#9B7EBD]/50 bg-[#9B7EBD]/10 rounded-2xl p-4 ">
-            <span className=" flex gap-2 items-center text-[#9B7EBD]/90">
-              <FaRegFileAlt /> Exemplo conteudo
-            </span>
-            <h3 className="font-bold">Titulo caderno</h3>
-            <div className="flex gap-2">
-              <p className="inline-block py-2 px-4 border-2 border-[#9B7EBD] bg-[#9B7EBD]/30 rounded-2xl">
-                #Tags
-              </p>
-              <p className="inline-block py-2 px-4 border-2 border-[#9B7EBD] bg-[#9B7EBD]/30 rounded-2xl">
-                #Tags
-              </p>
-              <p className="inline-block py-2 px-4 border-2 border-[#9B7EBD] bg-[#9B7EBD]/30 rounded-2xl">
-                #Tags
-              </p>
-            </div>
-            <p>xx /xx / xxxx</p>
-          </div>
-          <div className="flex flex-col gap-2 items-start border-2 border-[#9B7EBD]/50 bg-[#9B7EBD]/10 rounded-2xl p-4 ">
-            <span className=" flex gap-2 items-center text-[#9B7EBD]/90">
-              <FaRegFileAlt /> Exemplo conteudo
-            </span>
-            <h3 className="font-bold">Titulo caderno</h3>
-            <div className="flex gap-2">
-              <p className="inline-block py-2 px-4 border-2 border-[#9B7EBD] bg-[#9B7EBD]/30 rounded-2xl">
-                #Tags
-              </p>
-              <p className="inline-block py-2 px-4 border-2 border-[#9B7EBD] bg-[#9B7EBD]/30 rounded-2xl">
-                #Tags
-              </p>
-              <p className="inline-block py-2 px-4 border-2 border-[#9B7EBD] bg-[#9B7EBD]/30 rounded-2xl">
-                #Tags
-              </p>
-            </div>
-            <p>xx /xx / xxxx</p>
-          </div>
-          <div className="flex flex-col gap-2 items-start border-2 border-[#9B7EBD]/50 bg-[#9B7EBD]/10 rounded-2xl p-4 ">
-            <span className=" flex gap-2 items-center text-[#9B7EBD]/90">
-              <FaRegFileAlt /> Exemplo conteudo
-            </span>
-            <h3 className="font-bold">Titulo caderno</h3>
-            <div className="flex gap-2">
-              <p className="inline-block py-2 px-4 border-2 border-[#9B7EBD] bg-[#9B7EBD]/30 rounded-2xl">
-                #Tags
-              </p>
-              <p className="inline-block py-2 px-4 border-2 border-[#9B7EBD] bg-[#9B7EBD]/30 rounded-2xl">
-                #Tags
-              </p>
-              <p className="inline-block py-2 px-4 border-2 border-[#9B7EBD] bg-[#9B7EBD]/30 rounded-2xl">
-                #Tags
-              </p>
-            </div>
-            <p>xx /xx / xxxx</p>
-          </div>
+        <div className="w-full text-center  flex gap-5 rounded-2xl   ">
+          {cadernos.map((card) => (
+            <CardCaderno
+              key={card.id}
+              assunto={card.assunto}
+              title={card.title}
+              tag={card.tag}
+              data={card.data}
+            />
+          ))}
         </div>
       </PageSection>
-
-      {/* <div className="flex w-4xl   justify-between items-center  ">
-          <div>
-            <p>Cadernos recentes</p>
-          </div>
-
-          <div className="flex items-center gap-2 border-2 border-transparent hover:border-[#9B7EBD]/70 rounded-2xl px-5 py-2 cursor-pointer">
-            {" "}
-            <BsJournal />
-            <p>Ver mais</p>
-          </div>
-        </div> */}
     </section>
   );
 }
