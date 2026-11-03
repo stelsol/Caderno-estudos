@@ -7,8 +7,22 @@ import { FaRegFileAlt } from "react-icons/fa";
 import PageSection from "../componentes/PageSection/PageSection";
 import Tags from "../componentes/Tags/Tags";
 import CardCaderno from "../componentes/CardCaderno/CardCaderno";
+import CardMeta from "../componentes/CardMeta/CardMeta";
 
 const weekdays = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"];
+
+const Metas = [
+  {
+    id: 1,
+    meta: "assunto",
+    title: "Titulo1",
+  },
+  {
+    id: 2,
+    meta: "assunto",
+    title: "Titulo1",
+  },
+];
 
 const cadernos = [
   {
@@ -77,19 +91,11 @@ export default function Home() {
         icon={<LiaMapSolid />}
         LinkText="Ver trilha"
       >
-        <div className="w-full bg-[#9B7EBD]/10  border-2 border-[#9B7EBD]/50 text-center  flex gap-5 rounded-2xl  p-5 items-center ">
-          <div>
-            <label className="relative inline-flex ">
-              <input type="checkbox" name="check" className="sr-only peer" />
-              <span className="rounded-full  inline-block border-2 border-[#9B7EBD] w-6 h-6 peer-checked:bg-[#9B7EBD] peer-focus-visible:ring-2"></span>
-              <IoCheckmark className=" absolute hidden peer-checked:block inset-0 m-auto w-5 h-5  text-[#eeeeee] " />
-            </label>
-          </div>
-          <div className="flex flex-col items-start">
-            <h3 className="text-lg">Exemplo de meta </h3>
-            <p className="text-[#9B7EBD]/50 ">Informações caso necessário</p>
-          </div>
-        </div>
+        {/* Card metas fica aqui ! */}
+
+        {Metas.map((cont) => (
+          <CardMeta key={cont.id} title={cont.title} meta={cont.meta} />
+        ))}
       </PageSection>
 
       {/* Section Cadernos Recentes */}
