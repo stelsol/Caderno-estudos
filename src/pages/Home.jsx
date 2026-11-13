@@ -2,10 +2,7 @@ import { LiaMapSolid } from "react-icons/lia";
 import { BsJournal } from "react-icons/bs";
 import { FiPlus } from "react-icons/fi";
 import { LiaCircleSolid } from "react-icons/lia";
-import { IoCheckmark } from "react-icons/io5";
-import { FaRegFileAlt } from "react-icons/fa";
 import PageSection from "../componentes/PageSection/PageSection";
-import Tags from "../componentes/Tags/Tags";
 import CardCaderno from "../componentes/CardCaderno/CardCaderno";
 import CardMeta from "../componentes/CardMeta/CardMeta";
 
@@ -50,7 +47,7 @@ const cadernos = [
 
 export default function Home() {
   return (
-    <section className=" flex  flex-col  gap-9  pt-13">
+    <section className=" flex  flex-col  gap-9  pt-2">
       {/* Section frequencia de uso */}
 
       <PageSection>
