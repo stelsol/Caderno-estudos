@@ -17,10 +17,10 @@ export default function Sidebar() {
         </Link>
       </div>
       <div className=" flex flex-col items-stretch text-3xl gap-7 grow-7 p-1">
-        <Link to="#">
+        <Link to="/Home">
           <BiHomeAlt2 />
         </Link>
-        <Link to="#">
+        <Link to="/Dashboard">
           <TbLayoutDashboard />
         </Link>
         <Link to="#">
