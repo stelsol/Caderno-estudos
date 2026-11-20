@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "assunto": "Front-end",
+    "title": "Fundamentos HTML",
+    "tag": ["HTML", "Estrutura", "Web"],
+    "data": "10/01/2026"
+  },
+  {
+    "id": 2,
+    "assunto": "Front-end",
+    "title": "Estilização CSS",
+    "tag": ["CSS", "Flexbox", "Grid"],
+    "data": "12/01/2026"
+  },
+  {
+    "id": 3,
+    "assunto": "Front-end",
+    "title": "JavaScript Básico",
+    "tag": ["JavaScript", "Lógica"],
+    "data": "15/01/2026"
+  },
+  {
+    "id": 4,
+    "assunto": "Front-end",
+    "title": "React Fundamentos",
+    "tag": ["React", "Componentes", "JSX"],
+    "data": "18/01/2026"
+  },
+  {
+    "id": 5,
+    "assunto": "Front-end",
+    "title": "Tailwind CSS",
+    "tag": ["Tailwind", "CSS", "Design"],
+    "data": "20/01/2026"
+  },
+  {
+    "id": 6,
+    "assunto": "Back-end",
+    "title": "Introdução ao PHP",
+    "tag": ["PHP", "Servidor"],
+    "data": "22/01/2026"
+  },
+  {
+    "id": 7,
+    "assunto": "Back-end",
+    "title": "Node.js",
+    "tag": ["JavaScript", "Node", "Backend"],
+    "data": "25/01/2026"
+  },
+  {
+    "id": 8,
+    "assunto": "Back-end",
+    "title": "Banco de Dados",
+    "tag": ["SQL", "MySQL", "Database"],
+    "data": "28/01/2026"
+  },
+  {
+    "id": 9,
+    "assunto": "Segurança",
+    "title": "Fundamentos Cybersecurity",
+    "tag": ["Cybersecurity", "Segurança"],
+    "data": "02/02/2026"
+  },
+  {
+    "id": 10,
+    "assunto": "Segurança",
+    "title": "Segurança de Redes",
+    "tag": ["Redes", "TCP/IP", "Firewall"],
+    "data": "05/02/2026"
+  },
+  {
+    "id": 11,
+    "assunto": "Segurança",
+    "title": "Introdução ao Ethical Hacking",
+    "tag": ["Hacking", "Pentest", "Ethical"],
+    "data": "08/02/2026"
+  },
+  {
+    "id": 12,
+    "assunto": "Redes",
+    "title": "Fundamentos de Redes",
+    "tag": ["LAN", "WAN", "TCP/IP"],
+    "data": "11/02/2026"
+  },
+  {
+    "id": 13,
+    "assunto": "Redes",
+    "title": "Protocolos de Internet",
+    "tag": ["HTTP", "HTTPS", "DNS"],
+    "data": "14/02/2026"
+  },
+  {
+    "id": 14,
+    "assunto": "Programação",
+    "title": "Lógica de Programação",
+    "tag": ["Algoritmos", "JavaScript"],
+    "data": "17/02/2026"
+  },
+  {
+    "id": 15,
+    "assunto": "Programação",
+    "title": "Estruturas de Dados",
+    "tag": ["Arrays", "Objetos", "Algoritmos"],
+    "data": "20/02/2026"
+  },
+  {
+    "id": 16,
+    "assunto": "Programação",
+    "title": "Git e GitHub",
+    "tag": ["Git", "GitHub", "Versionamento"],
+    "data": "23/02/2026"
+  }
+]

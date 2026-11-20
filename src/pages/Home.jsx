@@ -1,13 +1,12 @@
 import { LiaMapSolid } from "react-icons/lia";
 import { BsJournal } from "react-icons/bs";
-
+import cadernos from "../data/cadernos.json";
 import { LiaCircleSolid } from "react-icons/lia";
 import PageSection from "../componentes/PageSection/PageSection";
 import PageHeader from "../componentes/PageHeader/PageHeader";
 import CardCaderno from "../componentes/CardCaderno/CardCaderno";
 import CardMeta from "../componentes/CardMeta/CardMeta";
-
-const weekdays = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"];
+import weekdays from "../data/weekdays.json";
 
 const Metas = [
   {
@@ -34,30 +33,6 @@ const Metas = [
     id: 2,
     meta: "assunto",
     title: "Titulo1",
-  },
-];
-
-const cadernos = [
-  {
-    id: 1,
-    assunto: "assunto",
-    title: "Titulo1",
-    tag: ["React", "Tailwind"],
-    data: "XX/XX/XXXX",
-  },
-  {
-    id: 2,
-    assunto: "assunto",
-    title: "Titulo2",
-    tag: ["Hacker", "Https", "Seguranca"],
-    data: "XX/XX/XXXX",
-  },
-  {
-    id: 3,
-    assunto: "assunto",
-    title: "Titulo3",
-    tag: ["teste"],
-    data: "XX/XX/XXXX",
   },
 ];
 
@@ -123,7 +98,7 @@ export default function Home() {
         LinkText="Ver mais"
       >
         <div className="w-full text-center  flex gap-5 rounded-2xl   ">
-          {cadernos.map((card) => (
+          {cadernos.slice(0, 3).map((card) => (
             <CardCaderno
               key={card.id}
               assunto={card.assunto}
