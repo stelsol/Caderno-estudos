@@ -9,7 +9,7 @@ import { HiOutlineUserCircle } from "react-icons/hi2";
 
 export default function Sidebar() {
   return (
-    <div className="  bg-[#9B7EBD]/50  w-[100px] flex flex-col  justify-center items-center rounded-2xl">
+    <div className="  bg-[#9B7EBD]/50  w-[100px] flex flex-col  justify-center items-center rounded-2xl ">
       <div className="flex flex-col items-center justify-start text-4xl gap-7  pt-4 grow-3">
         <img src={logo2} alt="Logo" />
         <Link to="#">
