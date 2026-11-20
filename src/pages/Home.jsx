@@ -1,8 +1,9 @@
 import { LiaMapSolid } from "react-icons/lia";
 import { BsJournal } from "react-icons/bs";
-import { FiPlus } from "react-icons/fi";
+
 import { LiaCircleSolid } from "react-icons/lia";
 import PageSection from "../componentes/PageSection/PageSection";
+import PageHeader from "../componentes/PageHeader/PageHeader";
 import CardCaderno from "../componentes/CardCaderno/CardCaderno";
 import CardMeta from "../componentes/CardMeta/CardMeta";
 
@@ -11,6 +12,21 @@ const weekdays = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"];
 const Metas = [
   {
     id: 1,
+    meta: "assunto",
+    title: "Titulo1",
+  },
+  {
+    id: 2,
+    meta: "assunto",
+    title: "Titulo1",
+  },
+  {
+    id: 2,
+    meta: "assunto",
+    title: "Titulo1",
+  },
+  {
+    id: 2,
     meta: "assunto",
     title: "Titulo1",
   },
@@ -51,7 +67,7 @@ export default function Home() {
       {/* Section frequencia de uso */}
 
       <PageSection>
-        <div className="flex w-4xl  justify-between items-center">
+        {/* <div className="flex w-4xl  justify-between items-center">
           <div className="flex flex-col gap-1">
             <h1 className="text-4xl">Ola, Usuario </h1>
             <p>Seja bem vindo de volta, vamos estudar ?</p>
@@ -64,7 +80,12 @@ export default function Home() {
             <FiPlus />
             Novo caderno
           </button>{" "}
-        </div>
+        </div> */}
+        <PageHeader
+          title="Ola, Usuario"
+          subtitle="Seja bem vindo de volta, vamos estudar ?"
+          buttonText="Novo caderno"
+        />
         {/* section dias de atividade */}
         <div className=" bg-[#9B7EBD]/10  border-2 border-[#9B7EBD]/50 text-center  flex flex-col gap-5 rounded-2xl  p-5 ">
           {/* contendo os dias estudados */}
