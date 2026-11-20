@@ -7,7 +7,7 @@ export default function Layout() {
       <div className=" min-h-0 flex flex-1 gap-3  shrink p-3">
         <Sidebar />
 
-        <div className=" overflow-y-auto min-h-0 flex-1 rounded-2xl flex justify-center ">
+        <div className=" no-scrollbar  overflow-y-auto min-h-0 flex-1 rounded-2xl flex justify-center ">
           <Outlet />
         </div>
       </div>
