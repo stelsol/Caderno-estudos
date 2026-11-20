@@ -26,7 +26,7 @@ export default function Sidebar() {
         <Link to="#">
           <LiaMapSolid />
         </Link>
-        <Link to="#">
+        <Link to="/Cadernos">
           <BsJournal />
         </Link>
       </div>
