@@ -1,13 +1,12 @@
 import { IoIosArrowDown } from "react-icons/io";
 import cadernos from "../../data/cadernos.json";
 import { useState } from "react";
-export default function Filtro() {
+export default function Filtro({ mudarArea, areaEscolhida }) {
   const [aberto, setAberto] = useState(false);
-  const [opcoes, setOpcoes] = useState("Todas");
 
   function opcao(opcaoclhida) {
     setAberto(false);
-    setOpcoes(opcaoclhida);
+    mudarArea(opcaoclhida);
   }
 
   return (
@@ -19,7 +18,7 @@ export default function Filtro() {
          rounded-2xl"
       >
         <p className="text-[#ffff] flex items-center justify-between ">
-          {opcoes}
+          {areaEscolhida}
           <IoIosArrowDown />
         </p>
       </button>

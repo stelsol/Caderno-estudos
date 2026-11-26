@@ -1,6 +1,6 @@
 import Filtro from "../Filtro/Filtro";
 
-export default function CardBusca({ icon }) {
+export default function CardBusca({ icon, mudarArea, areaEscolhida }) {
   return (
     <div className="w-full flex gap-3">
       {/* <div className=" flex-2 bg-amber-500">Buscar</div>{" "} */}
@@ -15,7 +15,7 @@ export default function CardBusca({ icon }) {
           {icon}
         </span>
       </label>
-      <Filtro />
+      <Filtro areaEscolhida={areaEscolhida} mudarArea={mudarArea} />
     </div>
   );
 }

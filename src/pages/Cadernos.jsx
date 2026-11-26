@@ -4,8 +4,11 @@ import PageHeader from "../componentes/PageHeader/PageHeader";
 import PageSection from "../componentes/PageSection/PageSection";
 import CardBusca from "../componentes/CardBusca/CardBusca";
 import { IoSearch } from "react-icons/io5";
+import { useState } from "react";
 
 export default function Cadernos() {
+  const [opcoes, setOpcoes] = useState("Todas");
+
   return (
     <section className=" flex  flex-col  gap-9  pt-2">
       <PageSection>
@@ -16,7 +19,11 @@ export default function Cadernos() {
         />
         <div className=" bg-[#9B7EBD]/10  border-2 border-[#9B7EBD]/50 text-center  flex flex-col gap-5 rounded-2xl  p-5 ">
           {/* Contendo Busca e filtro */}
-          <CardBusca icon={<IoSearch />} />
+          <CardBusca
+            icon={<IoSearch />}
+            areaEscolhida={opcoes}
+            mudarArea={setOpcoes}
+          />
         </div>
 
         <div className="w-full text-center grid grid-cols-3 gap-5 rounded-2xl   ">
